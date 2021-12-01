@@ -1,0 +1,250 @@
+|decoder
+c[0] => xor4:xorA.x0
+c[1] => xor5:par1.x0
+c[1] => xor5:par3.x0
+c[2] => xor5:par1.x1
+c[2] => xor5:par4.x0
+c[3] => xor5:par2.x0
+c[3] => xor5:par3.x1
+c[4] => xor5:par2.x1
+c[4] => xor5:par4.x1
+c[5] => xor4:xorB.x0
+c[6] => xor4:xorA.x1
+c[6] => xor5:par3.x2
+c[7] => xor4:xorA.x2
+c[7] => xor5:par4.x2
+c[8] => xor4:xorB.x1
+c[8] => xor5:par1.x2
+c[9] => xor4:xorB.x2
+c[9] => xor5:par2.x2
+c[10] => xor4:xorA.x3
+c[10] => xor4:xorB.x3
+c[11] => xor5:par1.x3
+c[12] => xor5:par2.x3
+c[13] => xor5:par3.x3
+c[14] => xor5:par4.x3
+d[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+d[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+d[2] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+d[3] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
+d[4] <= d[4].DB_MAX_OUTPUT_PORT_TYPE
+d[5] <= d[5].DB_MAX_OUTPUT_PORT_TYPE
+d[6] <= d[6].DB_MAX_OUTPUT_PORT_TYPE
+d[7] <= d[7].DB_MAX_OUTPUT_PORT_TYPE
+d[8] <= d[8].DB_MAX_OUTPUT_PORT_TYPE
+d[9] <= d[9].DB_MAX_OUTPUT_PORT_TYPE
+d[10] <= d[10].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor4:xorA
+x0 => xor2:xor_tmp1.x0
+x1 => xor2:xor_tmp1.x1
+x2 => xor2:xor_tmp2.x0
+x3 => xor2:xor_tmp2.x1
+y <= xor2:final.y
+
+
+|decoder|xor4:xorA|xor2:xor_tmp1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor4:xorA|xor2:xor_tmp2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor4:xorA|xor2:final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor4:xorB
+x0 => xor2:xor_tmp1.x0
+x1 => xor2:xor_tmp1.x1
+x2 => xor2:xor_tmp2.x0
+x3 => xor2:xor_tmp2.x1
+y <= xor2:final.y
+
+
+|decoder|xor4:xorB|xor2:xor_tmp1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor4:xorB|xor2:xor_tmp2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor4:xorB|xor2:final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par1
+x0 => xor3:xor_tmp1.x0
+x1 => xor3:xor_tmp1.x1
+x2 => xor3:xor_tmp1.x2
+x3 => xor2:xor_tmp2.x0
+x4 => xor2:xor_tmp2.x1
+y <= xor2:final.y
+
+
+|decoder|xor5:par1|xor3:xor_tmp1
+x0 => xor2:xor_tmp.x0
+x1 => xor2:xor_tmp.x1
+x2 => xor2:final.x1
+y <= xor2:final.y
+
+
+|decoder|xor5:par1|xor3:xor_tmp1|xor2:xor_tmp
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par1|xor3:xor_tmp1|xor2:final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par1|xor2:xor_tmp2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par1|xor2:final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par2
+x0 => xor3:xor_tmp1.x0
+x1 => xor3:xor_tmp1.x1
+x2 => xor3:xor_tmp1.x2
+x3 => xor2:xor_tmp2.x0
+x4 => xor2:xor_tmp2.x1
+y <= xor2:final.y
+
+
+|decoder|xor5:par2|xor3:xor_tmp1
+x0 => xor2:xor_tmp.x0
+x1 => xor2:xor_tmp.x1
+x2 => xor2:final.x1
+y <= xor2:final.y
+
+
+|decoder|xor5:par2|xor3:xor_tmp1|xor2:xor_tmp
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par2|xor3:xor_tmp1|xor2:final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par2|xor2:xor_tmp2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par2|xor2:final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par3
+x0 => xor3:xor_tmp1.x0
+x1 => xor3:xor_tmp1.x1
+x2 => xor3:xor_tmp1.x2
+x3 => xor2:xor_tmp2.x0
+x4 => xor2:xor_tmp2.x1
+y <= xor2:final.y
+
+
+|decoder|xor5:par3|xor3:xor_tmp1
+x0 => xor2:xor_tmp.x0
+x1 => xor2:xor_tmp.x1
+x2 => xor2:final.x1
+y <= xor2:final.y
+
+
+|decoder|xor5:par3|xor3:xor_tmp1|xor2:xor_tmp
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par3|xor3:xor_tmp1|xor2:final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par3|xor2:xor_tmp2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par3|xor2:final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par4
+x0 => xor3:xor_tmp1.x0
+x1 => xor3:xor_tmp1.x1
+x2 => xor3:xor_tmp1.x2
+x3 => xor2:xor_tmp2.x0
+x4 => xor2:xor_tmp2.x1
+y <= xor2:final.y
+
+
+|decoder|xor5:par4|xor3:xor_tmp1
+x0 => xor2:xor_tmp.x0
+x1 => xor2:xor_tmp.x1
+x2 => xor2:final.x1
+y <= xor2:final.y
+
+
+|decoder|xor5:par4|xor3:xor_tmp1|xor2:xor_tmp
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par4|xor3:xor_tmp1|xor2:final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par4|xor2:xor_tmp2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|xor5:par4|xor2:final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
