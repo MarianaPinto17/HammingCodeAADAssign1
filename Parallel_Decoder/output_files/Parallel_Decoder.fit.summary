@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Dec  1 18:25:30 2021
+Fitter Status : Successful - Sun Dec  5 17:20:48 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Parallel_Decoder
-Top-level Entity Name : decoder
+Top-level Entity Name : HamDecoder
 Family : Cyclone IV GX
 Device : EP4CGX15BF14C6
 Timing Models : Final
-Total logic elements : 0 / 14,400 ( 0 % )
-    Total combinational functions : 0 / 14,400 ( 0 % )
+Total logic elements : 32 / 14,400 ( < 1 % )
+    Total combinational functions : 32 / 14,400 ( < 1 % )
     Dedicated logic registers : 0 / 14,400 ( 0 % )
 Total registers : 0
 Total pins : 26 / 81 ( 32 % )
