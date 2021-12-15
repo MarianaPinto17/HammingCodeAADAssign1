@@ -64,19 +64,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "d[8]",
+					"name" : "d[0]",
 					"strict" : false
 				},
 				{
-					"name" : "d[10]",
-					"strict" : false
-				},
-				{
-					"name" : "d[5]",
-					"strict" : false
-				},
-				{
-					"name" : "d[9]",
+					"name" : "d[1]",
 					"strict" : false
 				},
 				{
@@ -84,15 +76,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "d[4]",
-					"strict" : false
-				},
-				{
-					"name" : "d[7]",
-					"strict" : false
-				},
-				{
-					"name" : "d[1]",
+					"name" : "d[5]",
 					"strict" : false
 				},
 				{
@@ -104,7 +88,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "d[0]",
+					"name" : "d[8]",
+					"strict" : false
+				},
+				{
+					"name" : "d[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d[7]",
+					"strict" : false
+				},
+				{
+					"name" : "d[9]",
+					"strict" : false
+				},
+				{
+					"name" : "d[10]",
 					"strict" : false
 				}
 			]

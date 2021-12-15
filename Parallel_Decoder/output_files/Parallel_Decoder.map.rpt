@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Parallel_Decoder
-Sun Dec  5 17:20:44 2021
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Wed Dec  8 22:36:44 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -13,11 +13,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Logic Cells Representing Combinational Loops
-  9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,8 +43,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Dec  5 17:20:44 2021       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec  8 22:36:44 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Parallel_Decoder                            ;
 ; Top-level Entity Name              ; HamDecoder                                  ;
 ; Family                             ; Cyclone IV GX                               ;
@@ -155,8 +154,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -166,14 +165,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                               ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                        ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------+---------+
-; xor_gate.vhd                     ; yes             ; User VHDL File  ; /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd   ;         ;
-; HamDecoder.vhd                   ; yes             ; User VHDL File  ; /home/hugo/aad/proj/Parallel_Decoder/HamDecoder.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                              ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                       ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
+; xor_gate.vhd                     ; yes             ; User VHDL File  ; /home/spiders17/Desktop/MarianaPinto/UNI/4ano/1semestre/AAD/LABS/Assignment1/HammingCodeAADAssign1/Parallel_Decoder/xor_gate.vhd   ;         ;
+; HamDecoder.vhd                   ; yes             ; User VHDL File  ; /home/spiders17/Desktop/MarianaPinto/UNI/4ano/1semestre/AAD/LABS/Assignment1/HammingCodeAADAssign1/Parallel_Decoder/HamDecoder.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------+
@@ -187,8 +186,8 @@ https://fpgasoftware.intel.com/eula.
 ;                          ;                        ;
 ; Maximum fan-out node     ; xor5:par4|xor2:final|y ;
 ; Maximum fan-out          ; 11                     ;
-; Total fan-out            ; 146                    ;
-; Average fan-out          ; 1.74                   ;
+; Total fan-out            ; 135                    ;
+; Average fan-out          ; 1.61                   ;
 +--------------------------+------------------------+
 
 
@@ -214,27 +213,6 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                ;
-+--------------------------------------------------------+----+
-; Logic Cell Name                                        ;    ;
-+--------------------------------------------------------+----+
-; d[0]~0                                                 ;    ;
-; d[1]~1                                                 ;    ;
-; d[2]~2                                                 ;    ;
-; d[3]~3                                                 ;    ;
-; d[4]~4                                                 ;    ;
-; d[5]~5                                                 ;    ;
-; d[6]~6                                                 ;    ;
-; d[7]~7                                                 ;    ;
-; d[8]~8                                                 ;    ;
-; d[9]~9                                                 ;    ;
-; d[10]~10                                               ;    ;
-; Number of logic cells representing combinational loops ; 11 ;
-+--------------------------------------------------------+----+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
@@ -258,12 +236,11 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; boundary_port         ; 26                          ;
 ; cycloneiii_lcell_comb ; 32                          ;
 ;     normal            ; 32                          ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 11                          ;
+;         2 data inputs ; 15                          ;
 ;         4 data inputs ; 17                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.43                        ;
+; Average LUT depth     ; 4.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -279,47 +256,5 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
-Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Dec  5 17:20:35 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Parallel_Decoder -c Parallel_Decoder
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Warning (12090): Entity "xor3" obtained from "xor_gate.vhd" instead of from Quartus Prime megafunction library File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 18
-Warning (12090): Entity "xor4" obtained from "xor_gate.vhd" instead of from Quartus Prime megafunction library File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 38
-Info (12021): Found 8 design units, including 4 entities, in source file xor_gate.vhd
-    Info (12022): Found design unit 1: xor2-behavioral File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 9
-    Info (12022): Found design unit 2: xor3-behavioral File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 23
-    Info (12022): Found design unit 3: xor4-behavioral File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 43
-    Info (12022): Found design unit 4: xor5-behavioral File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 64
-    Info (12023): Found entity 1: xor2 File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 4
-    Info (12023): Found entity 2: xor3 File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 18
-    Info (12023): Found entity 3: xor4 File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 38
-    Info (12023): Found entity 4: xor5 File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 59
-Info (12021): Found 2 design units, including 1 entities, in source file decoder.vhd
-    Info (12022): Found design unit 1: decoder-structural File: /home/hugo/aad/proj/Parallel_Decoder/decoder.vhd Line: 9
-    Info (12023): Found entity 1: decoder File: /home/hugo/aad/proj/Parallel_Decoder/decoder.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file HamDecoder.vhd
-    Info (12022): Found design unit 1: HamDecoder-structural File: /home/hugo/aad/proj/Parallel_Decoder/HamDecoder.vhd Line: 16
-    Info (12023): Found entity 1: HamDecoder File: /home/hugo/aad/proj/Parallel_Decoder/HamDecoder.vhd Line: 10
-Info (12127): Elaborating entity "HamDecoder" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at HamDecoder.vhd(45): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/hugo/aad/proj/Parallel_Decoder/HamDecoder.vhd Line: 45
-Info (12128): Elaborating entity "xor4" for hierarchy "xor4:xorA" File: /home/hugo/aad/proj/Parallel_Decoder/HamDecoder.vhd Line: 34
-Info (12128): Elaborating entity "xor2" for hierarchy "xor4:xorA|xor2:xor_tmp1" File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 50
-Info (12128): Elaborating entity "xor5" for hierarchy "xor5:par1" File: /home/hugo/aad/proj/Parallel_Decoder/HamDecoder.vhd Line: 36
-Info (12128): Elaborating entity "xor3" for hierarchy "xor5:par1|xor3:xor_tmp1" File: /home/hugo/aad/proj/Parallel_Decoder/xor_gate.vhd Line: 75
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 58 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 32 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 482 megabytes
-    Info: Processing ended: Sun Dec  5 17:20:44 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
 
 

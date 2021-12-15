@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Parallel_Encoder
-Sun Dec  5 16:00:55 2021
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Wed Dec  8 18:42:41 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -43,13 +43,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Dec  5 16:00:55 2021       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec  8 18:42:41 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Parallel_Encoder                            ;
 ; Top-level Entity Name              ; encoder                                     ;
 ; Family                             ; Cyclone IV GX                               ;
-; Total logic elements               ; 7                                           ;
-;     Total combinational functions  ; 7                                           ;
+; Total logic elements               ; 6                                           ;
+;     Total combinational functions  ; 6                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 26                                          ;
@@ -154,8 +154,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -165,14 +165,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-; encoder.vhd                      ; yes             ; User VHDL File  ; /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/encoder.vhd  ;         ;
-; xor_gate.vhd                     ; yes             ; User VHDL File  ; /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
+; encoder.vhd                      ; yes             ; User VHDL File  ; /home/spiders17/Desktop/MarianaPinto/UNI/4ano/1semestre/AAD/LABS/Assignment1/HammingCodeAADAssign1/Parallel_Encoder/encoder.vhd  ;         ;
+; xor_gate.vhd                     ; yes             ; User VHDL File  ; /home/spiders17/Desktop/MarianaPinto/UNI/4ano/1semestre/AAD/LABS/Assignment1/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -184,10 +184,10 @@ https://fpgasoftware.intel.com/eula.
 ;                          ;                  ;
 ; DSP block 9-bit elements ; 0                ;
 ;                          ;                  ;
-; Maximum fan-out node     ; d[7]~input       ;
-; Maximum fan-out          ; 4                ;
-; Total fan-out            ; 67               ;
-; Average fan-out          ; 1.14             ;
+; Maximum fan-out node     ; d[0]~input       ;
+; Maximum fan-out          ; 3                ;
+; Total fan-out            ; 65               ;
+; Average fan-out          ; 1.12             ;
 +--------------------------+------------------+
 
 
@@ -196,15 +196,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+-------------+--------------+
-; |encoder                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 26   ; 0            ; |encoder                      ; encoder     ; work         ;
-;    |xor4:par1|             ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par1            ; xor4        ; work         ;
-;       |xor2:final|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par1|xor2:final ; xor2        ; work         ;
-;    |xor4:par2|             ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par2            ; xor4        ; work         ;
-;       |xor2:final|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par2|xor2:final ; xor2        ; work         ;
+; |encoder                   ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 26   ; 0            ; |encoder                      ; encoder     ; work         ;
+;    |xor4:par1|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par1            ; xor4        ; work         ;
+;       |xor2:final|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par1|xor2:final ; xor2        ; work         ;
+;    |xor4:par2|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par2            ; xor4        ; work         ;
+;       |xor2:final|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par2|xor2:final ; xor2        ; work         ;
 ;    |xor4:par3|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par3            ; xor4        ; work         ;
 ;       |xor2:final|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par3|xor2:final ; xor2        ; work         ;
 ;    |xor4:par4|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par4            ; xor4        ; work         ;
 ;       |xor2:final|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:par4|xor2:final ; xor2        ; work         ;
+;    |xor4:xorA|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:xorA            ; xor4        ; work         ;
+;       |xor2:final|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:xorA|xor2:final ; xor2        ; work         ;
 ;    |xor4:xorB|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:xorB            ; xor4        ; work         ;
 ;       |xor2:final|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |encoder|xor4:xorB|xor2:final ; xor2        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+-------------+--------------+
@@ -232,13 +234,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 26                          ;
-; cycloneiii_lcell_comb ; 7                           ;
-;     normal            ; 7                           ;
-;         2 data inputs ; 1                           ;
+; cycloneiii_lcell_comb ; 6                           ;
+;     normal            ; 6                           ;
 ;         4 data inputs ; 6                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.89                        ;
+; Average LUT depth     ; 1.76                        ;
 +-----------------------+-----------------------------+
 
 
@@ -254,41 +255,5 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
-Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Dec  5 16:00:47 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Parallel_Encoder -c Parallel_Encoder
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file encoder.vhd
-    Info (12022): Found design unit 1: encoder-structural File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/encoder.vhd Line: 14
-    Info (12023): Found entity 1: encoder File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/encoder.vhd Line: 8
-Warning (12090): Entity "xor3" obtained from "xor_gate.vhd" instead of from Quartus Prime megafunction library File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 18
-Warning (12090): Entity "xor4" obtained from "xor_gate.vhd" instead of from Quartus Prime megafunction library File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 38
-Info (12021): Found 8 design units, including 4 entities, in source file xor_gate.vhd
-    Info (12022): Found design unit 1: xor2-behavioral File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 9
-    Info (12022): Found design unit 2: xor3-behavioral File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 23
-    Info (12022): Found design unit 3: xor4-behavioral File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 43
-    Info (12022): Found design unit 4: xor5-behavioral File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 64
-    Info (12023): Found entity 1: xor2 File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 4
-    Info (12023): Found entity 2: xor3 File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 18
-    Info (12023): Found entity 3: xor4 File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 38
-    Info (12023): Found entity 4: xor5 File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 59
-Info (12127): Elaborating entity "encoder" for the top level hierarchy
-Info (12128): Elaborating entity "xor4" for hierarchy "xor4:xorA" File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/encoder.vhd Line: 29
-Info (12128): Elaborating entity "xor2" for hierarchy "xor4:xorA|xor2:xor_tmp1" File: /home/hugo/aad/HammingCodeAADAssign1/Parallel_Encoder/xor_gate.vhd Line: 50
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 33 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 7 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 481 megabytes
-    Info: Processing ended: Sun Dec  5 16:00:55 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
 
 

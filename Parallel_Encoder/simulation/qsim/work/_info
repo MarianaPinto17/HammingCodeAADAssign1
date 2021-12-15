@@ -1,0 +1,150 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/spiders17/Desktop/MarianaPinto/UNI/4ano/1semestre/AAD/LABS/Assignment1/HammingCodeAADAssign1/Parallel_Encoder/simulation/qsim
+Eencoder
+Z1 w1638988985
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx9 cycloneiv 19 cycloneiv_atom_pack 0 22 ^M[R>L941CzW^5^z4gfb52
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx9 cycloneiv 20 cycloneiv_components 0 22 A=5Z=j^V:4BYGPNKNFE9o0
+!i122 39
+R0
+Z8 8Parallel_Encoder.vho
+Z9 FParallel_Encoder.vho
+l0
+Z10 L35 1
+VK[O0kACBbB2zQNW`8bnd11
+!s100 f=izz1B`?987IbVY4I40U3
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1638988986
+!i10b 1
+Z13 !s108 1638988986.000000
+Z14 !s90 -work|work|Parallel_Encoder.vho|
+Z15 !s107 Parallel_Encoder.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 encoder 0 22 K[O0kACBbB2zQNW`8bnd11
+!i122 39
+l127
+L76 492
+V[TQ0fBZZ4gHhhPcWfV>gW2
+!s100 J[CU8m`;@`V30G557N;UR0
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Eencoder_vhd_vec_tst
+Z18 w1638988984
+R5
+R6
+!i122 40
+R0
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
+l0
+L32 1
+Vd<U=ngB?KKT0ZHFAl_0cY0
+!s100 1PRb<UZKhe9emhYL8QOLZ3
+R11
+32
+R12
+!i10b 1
+R13
+Z21 !s90 -work|work|Waveform.vwf.vht|
+Z22 !s107 Waveform.vwf.vht|
+!i113 1
+R16
+R17
+Aencoder_arch
+R5
+R6
+Z23 DEx4 work 19 encoder_vhd_vec_tst 0 22 d<U=ngB?KKT0ZHFAl_0cY0
+!i122 40
+l45
+Z24 L34 85
+VBKaN?IZ9?aol[z6m]lR@b3
+!s100 l=RE@HO<Y7hH7PCNj3^aV2
+R11
+32
+R12
+!i10b 1
+R13
+R21
+R22
+!i113 1
+R16
+R17
+Ehard_block
+Z25 w1638987832
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 33
+R0
+R8
+R9
+l0
+R10
+V5mcF]JUg7TS^l0EMa_h4A1
+!s100 Q?IbEnM>aW3cc=hi`GCc71
+R11
+32
+Z26 !s110 1638987833
+!i10b 1
+Z27 !s108 1638987833.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 5mcF]JUg7TS^l0EMa_h4A1
+!i122 33
+l65
+L51 20
+VMkbPfL8S?h^i>Mg3GSGD`1
+!s100 O>:lWQfHCcIaXgQ<=Tgn10
+R11
+32
+R26
+!i10b 1
+R27
+R14
+R15
+!i113 1
+R16
+R17

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Dec  5 16:00:55 2021
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Wed Dec  8 18:42:41 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Parallel_Encoder
 Top-level Entity Name : encoder
 Family : Cyclone IV GX
-Total logic elements : 7
-    Total combinational functions : 7
+Total logic elements : 6
+    Total combinational functions : 6
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 26
